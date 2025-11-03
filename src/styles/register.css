@@ -1,0 +1,126 @@
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+.register-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    width: 420px;
+    text-align: center;
+}
+
+.register-logo img {
+    width: 70px;
+    margin-bottom: 0.5rem;
+}
+
+.register-logo h2 {
+    color: #602ec4;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.register-card h3 {
+    margin-top: 1rem;
+    color: #333;
+}
+
+.register-subtitle {
+    color: #6c6c6c;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+input {
+    width: 100%;
+    padding: 0.9rem 0.9rem 0.9rem 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #602ec4;
+    outline: none;
+    box-shadow: 0 0 4px rgba(96, 46, 196, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.btn-register {
+    background-color: #602ec4;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.btn-register:hover {
+    background-color: #4d21a8;
+}
+
+.btn-register:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-text {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    color: #555;
+}
+
+.login-text span {
+    color: #602ec4;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-text span:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+    .register-card {
+        width: 90%;
+        padding: 1.8rem;
+    }
+}

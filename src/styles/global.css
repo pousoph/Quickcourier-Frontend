@@ -1,0 +1,122 @@
+/* 🌍 QuickCourier Global Styles (Tema Morado Plano) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* 🎨 Colores base */
+    --color-primary: #602ec4;
+    --color-accent: #fbc02d;
+    --color-bg: #f9f9fb;
+    --color-surface: #ffffff;
+    --color-text: #212121;
+    --color-text-light: #666666;
+    --color-border: #e0e0e0;
+    --color-success: #4caf50;
+    --color-error: #e53935;
+
+    /* 🔤 Tipografía */
+    --font-main: 'Poppins', sans-serif;
+
+    /* 📏 Tamaños tipográficos */
+    --fs-h1: 2rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+
+    /* 🧱 Espaciados */
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 40px;
+
+    /* ⛶ Bordes y sombras */
+    --radius-s: 6px;
+    --radius-m: 12px;
+    --radius-l: 20px;
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-strong: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔧 Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+/* 🔘 Botones */
+button {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: none;
+    padding: var(--spacing-m) var(--spacing-l);
+    border-radius: var(--radius-m);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #7142d1;
+    transform: translateY(-2px);
+}
+
+button.btn-secondary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+button.btn-secondary:hover {
+    background-color: #ffd740;
+}
+
+/* 🧭 Links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #7142d1;
+}
+
+/* 🧱 Tarjetas */
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-l);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* 📦 Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+/* ✨ Animaciones suaves */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,139 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fafafa;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #602ec4;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: #4d21a8;
+}
+
+.nav-btn.logout {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.nav-btn.logout:hover {
+    background: rgba(255, 0, 0, 0.35);
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.dashboard-main header h1 {
+    color: #602ec4;
+    margin-bottom: 0.3rem;
+}
+
+.dashboard-main header p {
+    color: #6c6c6c;
+    margin-bottom: 2rem;
+}
+
+.content-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: #f7f5fc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    color: #602ec4;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.8rem;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .dashboard-main {
+        padding: 1.5rem;
+    }
+}
