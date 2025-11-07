@@ -1,0 +1,108 @@
+:root {
+    --color-primary: #7b2cbf;
+    --color-primary-light: #9b4de3;
+    --color-border: #e0e0e0;
+    --color-bg-light: #faf8ff;
+    --color-text: #333;
+    --color-success: #28a745;
+    --color-error: #d9534f;
+}
+
+.confirm-step {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.confirm-section {
+    margin-bottom: 1.5rem;
+}
+
+.confirm-section h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.confirm-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 0.95rem;
+}
+
+.confirm-totals {
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.confirm-totals p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem 0;
+}
+
+.total-line {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: var(--color-error);
+    background: #fcebea;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.success-message {
+    color: var(--color-success);
+    background: #e6f4ea;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+    min-width: 130px;
+    height: 42px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-secondary {
+    background-color: #ffc107;
+    color: #111 !important;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #ffb300;
+}

@@ -1,0 +1,154 @@
+:root {
+    --color-primary: #7b2cbf;
+    --color-primary-light: #9b4de3;
+    --color-border: #e0e0e0;
+    --color-bg-light: #faf8ff;
+    --color-text: #333;
+}
+
+.checkout-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px 32px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.checkout-step {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.extras-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+}
+
+.extra-card {
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    background: #faf7ff;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.extra-card:hover {
+    border-color: var(--color-primary);
+    background: #f5ebff;
+}
+
+.extra-card.active {
+    border-color: var(--color-primary);
+    background: #ede0ff;
+    box-shadow: 0 2px 5px rgba(106, 13, 173, 0.15);
+}
+
+.extra-card input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+    margin-top: 4px;
+}
+
+.price-tag {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f3e5f5;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+}
+
+.checkout-summary {
+    background: #faf9ff;
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.checkout-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.4rem 0;
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+.total-line {
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    min-width: 130px;
+    height: 42px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #ffc107;
+    color: #111 !important;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-secondary:hover {
+    background-color: #ffb300;
+}
+
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .checkout-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}

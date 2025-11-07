@@ -1,0 +1,202 @@
+.catalogo-container {
+    background-color: #f8f7fb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(80, 56, 142, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-logo h2 {
+    color: #5c32b4;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.navbar-logo p {
+    font-size: 0.85rem;
+    color: #7a7a7a;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-btn,
+.logout-btn {
+    background-color: #5c32b4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-btn:hover,
+.logout-btn:hover {
+    background-color: #7044d0;
+    transform: translateY(-2px);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px rgba(80, 56, 142, 0.05);
+    border-bottom: 1px solid #ece9f5;
+}
+
+.search-bar {
+    background: #f3f0fa;
+    border: 1px solid #e2dcf3;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 280px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    background: none;
+    color: #4a4a4a;
+}
+
+.category-filters button {
+    border: 1px solid #d7c9f6;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    font-weight: 500;
+    color: #5c32b4;
+    transition: all 0.25s ease;
+}
+
+.category-filters button.active,
+.category-filters button:hover {
+    background-color: #5c32b4;
+    color: #ffffff;
+    border-color: #5c32b4;
+    transform: translateY(-2px);
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--spacing-l);
+    padding: var(--spacing-xl);
+}
+
+.product-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-l);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: var(--spacing-m);
+}
+
+.product-info h3 {
+    font-size: var(--fs-h3);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.descripcion {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-s);
+    font-size: var(--fs-small);
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.categoria-tag {
+    background-color: #ede7f6;
+    color: var(--color-primary);
+    border-radius: var(--radius-s);
+    padding: 2px 8px;
+    font-size: var(--fs-small);
+    display: inline-block;
+    margin-bottom: var(--spacing-s);
+}
+
+.btn-agregar {
+    background-color: var(--color-primary);
+    color: white;
+    width: 100%;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-s);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #7142d1;
+    transform: translateY(-2px);
+}
+
+.no-results,
+.loading-text {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xl);
+    font-style: italic;
+}

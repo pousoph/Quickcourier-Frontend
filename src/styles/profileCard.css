@@ -1,0 +1,43 @@
+.profile-card-navbar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.profile-card-navbar:hover {
+    background-color: rgba(106, 13, 173, 0.08);
+}
+
+.profile-avatar-small {
+    width: 36px;
+    height: 36px;
+    background-color: #6a0dad;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.profile-info-small {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.profile-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.profile-email {
+    font-size: 0.75rem;
+    color: #777;
+}

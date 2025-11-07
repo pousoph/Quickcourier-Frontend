@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Quickcourier-Frontend
 =======
 # React + Vite

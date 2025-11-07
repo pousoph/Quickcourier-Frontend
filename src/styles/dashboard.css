@@ -113,7 +113,6 @@ nav {
     margin-bottom: 0.8rem;
 }
 
-/* ----------- RESPONSIVE ----------- */
 @media (max-width: 768px) {
     .dashboard-container {
         flex-direction: column;
@@ -136,4 +135,30 @@ nav {
     .dashboard-main {
         padding: 1.5rem;
     }
+}
+.nav-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.content-box h2 {
+    color: #602ec4;
+    margin-bottom: 0.8rem;
+}
+
+.content-box p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.cards-grid .card {
+    cursor: pointer;
+}
+
+.cards-grid .card:hover {
+    background-color: #ece6ff;
+}
+
+.sidebar-user span {
+    text-transform: capitalize;
 }

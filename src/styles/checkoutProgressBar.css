@@ -1,0 +1,59 @@
+:root {
+    --color-primary: #7b2cbf;
+    --color-secondary: #b5179e;
+    --color-gray: #eaeaea;
+    --color-text: #333;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-gray);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.circle.active {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 0 0 4px #f4e8ff;
+}
+
+.label {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #888;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.label.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+

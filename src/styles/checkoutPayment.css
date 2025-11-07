@@ -1,0 +1,172 @@
+:root {
+    --color-primary: #6a0dad; /* Morado principal */
+    --color-primary-light: #8e24aa;
+    --color-accent: #ffc107; /* Amarillo */
+    --color-accent-hover: #ffb300;
+    --color-bg: #faf9fb;
+    --color-border: #e0d7eb;
+    --color-text: #333;
+    --color-muted: #777;
+}
+
+.payment-container {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.payment-container h3 {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.payment-container h4 {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.payment-section {
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    background: var(--color-bg);
+    margin-bottom: 1.5rem;
+}
+
+.payment-methods {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.payment-method {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    background: #faf8ff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.payment-method:hover {
+    border-color: var(--color-primary);
+    background: #f3e8ff;
+}
+
+.payment-method.active {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+    color: white;
+    box-shadow: 0 3px 6px rgba(106, 13, 173, 0.25);
+}
+
+.payment-method input[type="radio"] {
+    accent-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+}
+
+.payment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--color-accent);
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.payment-summary {
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    background: #fbf9fe;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.payment-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    color: var(--color-text);
+}
+
+.payment-summary .total-line {
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.success-message {
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid #c8e6c9;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #c62828;
+    background: #ffebee;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid #ffcdd2;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 1.5rem;
+    }
+
+    .payment-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

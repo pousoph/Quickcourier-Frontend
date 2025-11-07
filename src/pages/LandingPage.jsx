@@ -10,9 +10,11 @@ import {
     ClipboardList,
     CreditCard,
     Package,
-    Smartphone,
     Users,
-    Sparkles, BadgePercent,
+    Sparkles,
+    Smartphone,
+    Star,
+    BadgePercent,
 } from "lucide-react";
 
 export const LandingPage = () => {
@@ -20,131 +22,153 @@ export const LandingPage = () => {
 
     return (
         <div className="landing-container fade-in">
-            <header className="topbar">
-                <div className="topbar-content container">
-                    <div className="logo-section" onClick={() => navigate("/")}>
-                        <img src={logo} alt="QuickCourier logo" className="topbar-logo" />
-                        <span className="logo-text">QuickCourier</span>
+            {/* 🟣 Navbar */}
+            <header className="landing-header">
+                <div className="nav container">
+                    <div className="nav-logo" onClick={() => navigate("/")}>
+                        <img src={logo} alt="QuickCourier Logo" />
+                        <span>QuickCourier</span>
                     </div>
-                    <button className="topbar-btn" onClick={() => navigate("/login")}>
+                    <button className="btn-primary" onClick={() => navigate("/login")}>
                         Iniciar Sesión
                     </button>
                 </div>
             </header>
 
-            {/* 🟣 HERO */}
-            <section className="landing-hero container">
-                <div className="hero-content">
-                    <div className="hero-left">
-                        <div className="hero-logo-box">
-                            <img src={logo} alt="QuickCourier Logo" className="hero-logo" />
-                        </div>
-                        <h1>Tu entrega, más rápida que nunca 🚀</h1>
-                        <p>
-                            QuickCourier transforma la forma de hacer envíos urbanos: rápidos,
-                            seguros y con seguimiento en tiempo real. Tecnología que trabaja por ti.
-                        </p>
-                        <div className="btn-group">
-                            <button className="btn-secondary" onClick={() => navigate("/login")}>
-                                Comenzar Ahora
-                            </button>
-                        </div>
+            <section className="hero container">
+                <div className="hero-text">
+                    <h1>
+                        Tu ciudad, <span>a un click de distancia</span>
+                    </h1>
+                    <p>
+                        Envía y recibe paquetes en minutos con tecnología de entrega
+                        inteligente. Rápido, seguro y fácil de usar.
+                    </p>
+                    <div className="hero-actions">
+                        <button className="btn-primary" onClick={() => navigate("/register")}>
+                            Comenzar Ahora
+                        </button>
                     </div>
+                </div>
+                <div className="hero-image">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*_dPrx2YqMLv2KPHA4YI5Wg.jpeg" alt="city" />
+                    <div className="hero-badge">Entrega garantizada 🕒</div>
+                </div>
+            </section>
 
-                    <div className="hero-right">
-                        <div className="delivery-icon-box">
-                            <Truck className="truck-icon" />
-                        </div>
+            <section className="metrics-section">
+                <div className="container metrics-grid">
+                    <div className="metric">
+                        <h3>50K+</h3>
+                        <p>Entregas diarias</p>
+                    </div>
+                    <div className="metric">
+                        <h3>200K+</h3>
+                        <p>Pedidos mensuales</p>
+                    </div>
+                    <div className="metric">
+                        <h3>4.9/5</h3>
+                        <p>Calificación promedio</p>
+                    </div>
+                    <div className="metric">
+                        <h3>98%</h3>
+                        <p>Satisfacción</p>
                     </div>
                 </div>
             </section>
 
-            <section className="why-section">
-                <h2>¿Por qué elegir QuickCourier?</h2>
+            <section id="features" className="features container">
+                <h2>¿Por qué QuickCourier?</h2>
                 <p className="section-desc">
-                    Ofrecemos un servicio de entregas urbanas con tecnología de punta y atención al detalle.
+                    Tecnología y servicio al cliente en primer lugar.
                 </p>
-                <div className="why-grid container">
-                    <div className="why-card">
-                        <BadgePercent className="why-icon" />
-                        <h3>Promociones</h3>
-                        <p>Recibe promociones los fines de semana.</p>
+                <div className="features-grid">
+                    <div className="feature-card">
+                        <Clock className="feature-icon" />
+                        <h3>Entrega en 30min</h3>
+                        <p>Recoge y entrega tus envíos más rápido que nunca.</p>
                     </div>
-                    <div className="why-card">
-                        <ShieldCheck className="why-icon" />
+                    <div className="feature-card">
+                        <ShieldCheck className="feature-icon" />
                         <h3>100% Seguro</h3>
-                        <p>Todos tus envíos están protegidos.</p>
+                        <p>Tu paquete siempre protegido durante el trayecto.</p>
                     </div>
-                    <div className="why-card">
-                        <Clock className="why-icon" />
+                    <div className="feature-card">
+                        <Truck className="feature-icon" />
                         <h3>24/7 Disponible</h3>
-                        <p>Servicio continuo todos los días del año, sin interrupciones.</p>
+                        <p>Servicio sin interrupciones los 7 días de la semana.</p>
                     </div>
                 </div>
             </section>
 
-            {/* ⚙️ CÓMO FUNCIONA */}
-            <section className="process-section container">
-                <h2>¿Cómo funciona?</h2>
-                <p className="section-desc">En solo tres pasos tu paquete estará en camino 🛵</p>
-                <div className="process-steps">
-                    <div className="process-line"></div>
-
-                    <div className="process-step">
-                        <div className="circle">1</div>
-                        <ClipboardList className="process-icon" />
-                        <h3>Ingresa los detalles</h3>
-                        <p>Completa el formulario con origen, destino y tipo de paquete.</p>
-                    </div>
-
-                    <div className="process-step">
-                        <div className="circle">2</div>
-                        <Package className="process-icon" />
-                        <h3>Selecciona extras</h3>
-                        <p>Añade seguro, empaque especial o entrega exprés según tus necesidades.</p>
-                    </div>
-
-                    <div className="process-step">
-                        <div className="circle">3</div>
-                        <CreditCard className="process-icon" />
-                        <h3>Paga y listo</h3>
-                        <p>Confirma tu pedido.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* 💎 BENEFICIOS ADICIONALES */}
-            <section className="benefits-section container">
-                <h2>Ventajas que te encantarán</h2>
-                <div className="benefits-grid">
-                    <div className="benefit-card">
-                        <Smartphone className="benefit-icon" />
-                        <h3>App Inteligente</h3>
-                        <p>Gestiona tus pedidos desde tu móvil con una interfaz fluida y moderna.</p>
-                    </div>
-                    <div className="benefit-card">
-                        <Users className="benefit-icon" />
-                        <h3>Repartidores Confiables</h3>
-                        <p>Solo mensajeros verificados con historial impecable de servicio.</p>
-                    </div>
-                    <div className="benefit-card">
-                        <Sparkles className="benefit-icon" />
-                        <h3>Experiencia Premium</h3>
-                        <p>Disfruta de un servicio rápido, seguro y con atención personalizada.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="cta-section">
-                <h2>¿Preparado?</h2>
-                <p>
-                    Miles de usuarios ya confían en QuickCourier. Súmate hoy y vive la
-                    experiencia de la entrega sin estrés.
+            <section id="steps" className="steps-section container">
+                <h2>4 pasos simples</h2>
+                <p className="section-desc">
+                    Desde tu pedido hasta la entrega en minutos.
                 </p>
-                <button onClick={() => navigate("/register")}>Crear mi cuenta gratis</button>
+                <div className="steps-list">
+                    <div className="step active">
+                        <div className="step-number">1</div>
+                        <MapPin className="step-icon" />
+                        <div>
+                            <h4>Elige tu ubicación</h4>
+                            <p>Indica el origen y destino de tu envío.</p>
+                        </div>
+                    </div>
+
+                    <div className="step">
+                        <div className="step-number">2</div>
+                        <Package className="step-icon" />
+                        <div>
+                            <h4>Selecciona productos</h4>
+                            <p>Elige los artículos o paquetes a enviar.</p>
+                        </div>
+                    </div>
+
+                    <div className="step">
+                        <div className="step-number">3</div>
+                        <CreditCard className="step-icon" />
+                        <div>
+                            <h4>Paga de forma segura</h4>
+                            <p>Usa múltiples métodos de pago disponibles.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <section id="reviews" className="reviews-section">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <div className="reviews-grid container">
+                    {[
+                        { name: "Sebastian Carroz", text: "Entrega rápida y sin complicaciones. ¡Excelente servicio!" },
+                        { name: "Sophy Guiza", text: "La app es muy intuitiva y el seguimiento en tiempo real me encanta." },
+                        { name: "Andres Guerrero", text: "Nunca pensé que enviar un paquete fuera tan fácil. Recomendado 100%." },
+                    ].map((review, i) => (
+                        <div key={i} className="review-card">
+                            <p>"{review.text}"</p>
+                            <div className="review-footer">
+                                <strong>{review.name}</strong>
+                                <div className="stars">
+                                    {[...Array(5)].map((_, j) => (
+                                        <Star key={j} className="star" />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* 🟣 CTA FINAL */}
+            <section className="cta-section">
+                <h2>¿Listo para enviar con QuickCourier?</h2>
+                <p>Únete a miles de usuarios satisfechos que ya disfrutan de entregas sin estrés.</p>
+                <button className="btn-primary" onClick={() => navigate("/register")}>
+                    Crear mi cuenta gratis
+                </button>
+            </section>
+
+            {/* ⚪ FOOTER */}
             <footer className="landing-footer">
                 <p>© {new Date().getFullYear()} QuickCourier — Todos los derechos reservados.</p>
             </footer>
